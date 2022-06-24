@@ -1,0 +1,5 @@
+function disemvowel(str) {
+  const vowels =['e','u','i','o','a']
+  const arrStr = str.split('')
+  return arrStr.filter(el => !vowels.includes(el.toLowerCase())).join('')
+}
