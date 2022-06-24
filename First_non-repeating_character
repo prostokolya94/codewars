@@ -1,0 +1,22 @@
+function firstNonRepeatingLetter(s) {
+  let arrS = s.split('') ////массив символов из строки
+  let newS = s.toLowerCase() /// строка в нижнем регистре
+  let result = []; /// сюда попадут уникальные элементы
+  let repeat = [];  /// сюда попадут повторы
+  /*сортируем на уникумы и повторы*/
+  for (let str of newS) {
+    if (!result.includes(str)) {
+      result.push(str);
+    } else {repeat.push(str)
+           }
+  }
+ let finalWithoutRegistr = result.filter(word=>!repeat.includes(word)) ///массив для неповторяющихся символов без учета регистра
+  if (finalWithoutRegistr.length === 0){
+    return ""
+  } else {
+    let findLet =  finalWithoutRegistr[0]///искомый символ без регистра
+    let num = newS.indexOf(findLet)
+    return arrS[num]
+    } 
+    
+  }
