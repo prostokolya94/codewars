@@ -1,0 +1,6 @@
+function minMax(arr){
+  let maxPrice = Math.max(...arr)
+  let minPrice = Math.min(...arr)
+  let prices = [minPrice, maxPrice]
+  return prices
+}
