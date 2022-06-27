@@ -1,0 +1,15 @@
+function solution(str){
+  let arr = str.split('')
+  let resultArr =[]
+  let x = arr.length / 2 
+  for (i=0; i<x; i++) {
+    if (arr.length > 1) {
+    resultArr.push(arr[0]+arr[1])
+    arr.shift()
+    arr.shift()
+    } else {
+      resultArr.push(arr[0]+'_')
+      }
+    }
+  return(resultArr)
+}
