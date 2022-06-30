@@ -1,0 +1,19 @@
+function pigIt(str){
+  let newArr = []
+  let newArray = []
+  let strArr = str.split(' ')
+  
+  for (i=0; i<strArr.length; i++){
+    newArr = strArr[i].split('')
+    if (newArr.includes('!')){
+      let deleteFirstChary = newArr.shift()
+    newArray.push(newArr.join('')+deleteFirstChary)
+    } else if (newArr.includes('?')){
+      let deleteFirstChard = newArr.shift()
+    newArray.push(newArr.join('')+deleteFirstChard)} 
+    else {
+    let deleteFirstChar = newArr.shift()
+    newArray.push(newArr.join('')+deleteFirstChar+'ay')
+  }}
+  return (newArray.join(' '))
+}
