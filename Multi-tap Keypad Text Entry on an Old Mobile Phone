@@ -1,0 +1,22 @@
+function presses(phrase) {
+  const arr1 = ['A','D','G','J','M','P','T','W','1','2','3','4','5','6','7','8','9','0']
+  const arr2 = ['B','E','H','K','N','Q','U','X']
+  const arr3 = ['C','F','I','L','O','R','V','Y']
+  const arr4 = ['S','Z']
+  let count = 0 
+  const phraseArr = phrase.split('')
+  for (i=0; i<phraseArr.length; i++){
+    let el = phraseArr[i]
+    if (arr1.includes(el)|| el==' '){
+      count = count+1
+    } else if (arr2.includes(el)){
+      count = count+2
+    } else if (arr3.includes(el)){
+      count = count+3
+    } else if (arr4.includes(el)){
+      count = count+4
+    } 
+  }
+    console.log(phraseArr)
+    return count
+  }
